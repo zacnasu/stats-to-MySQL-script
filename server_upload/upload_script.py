@@ -22,11 +22,11 @@ def main():
         table_rows.extend(read_file(file,"PK"))
     #repurposed from PYnative article written by Vishal
     try:
-        connection = mysql.connector.connect(host=json['host'],
-                                            database=json['database'],
-                                            auth_plugin=json['auth_plugin'],
-                                            user=json['user'],
-                                            password=json['password']
+        connection = mysql.connector.connect(host=info['host'],
+                                            database=info['database'],
+                                            auth_plugin=info['auth_plugin'],
+                                            user=info['user'],
+                                            password=info['password']
                                             )
 
         mySql_insert_query = """INSERT INTO data (shift_num, game_date, player1, player2, player3, player4, player5, SOGF, MSF, SOF, SOGA, MSA, SOA, shift_type, period)
